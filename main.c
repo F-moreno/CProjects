@@ -16,17 +16,50 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include"vetor.c"
 
-#include "vetor.h"
+#include "library.h"
 
 /*
  * 
  */
 int main(int argc, char ** argv) {
 
-    vetor();
+    int op=0;
     
-   
+    printf("Ola, seja bem vindo ao meu sistema expositor de estruturas de dados.\n");
+    do{
+        printf("Entre o valor correspondente ao exemplo que desejar observar:\n");
+        printf("\n\n");
+
+        printf("1 - Vetores\n");
+        
+        printf("0 - Sair\n");
+        printf("\n");
+
+        printf("Opcao: ");
+
+        scanf("%i",&op);
+        
+        switch(op){
+            case 1:
+                vetor();
+                break;  
+            case 0:
+                break;
+                        
+            default: 
+                system("cls");
+                printf("%i e uma opcao invalida!\n\n",op);
+                
+        }
+        
+        
+    }while(op!=1 && op !=0);
+    
+    
+    
+    system("PAUSE");
     return (EXIT_SUCCESS);
 }
 
