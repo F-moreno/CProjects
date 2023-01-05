@@ -105,9 +105,8 @@ float media(float vet[],int tam){
 
 float mediana(float vet[],int tam){
     crescente(vet,tam);
-    float m=0;
-    
-    tam/2? m = vet[tam/2] : m = ((vet[(tam/2)]+vet[(tam/2)-1])/2);
+    float m;
+    m = tam%2 ? vet[tam/2] : ((vet[(tam/2)]+vet[(tam/2)-1])/2);
     
     return m;
 }
